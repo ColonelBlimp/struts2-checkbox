@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "https://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+  <constant name="struts.devMode" value="true"/>
+  <constant name="struts.ui.theme" value="simple"/>
+
+  <package name="home" namespace="/" extends="struts-default">
+
+    <action name="home" method="execute" class="com.struts2stuff.struts2.actions.HomeAction">
+      <result name="input">WEB-INF/templates/home.ftl</result>
+      <result name="success">WEB-INF/templates/display.jsp</result>
+    </action>
+
+  </package>
+
+</struts>
